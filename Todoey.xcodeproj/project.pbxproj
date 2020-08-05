@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0779CCF824D921C0001342E8 /* SubtaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779CCF724D921C0001342E8 /* SubtaskViewController.swift */; };
+		0779CCFA24D92220001342E8 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779CCF924D92220001342E8 /* SwipeTableViewController.swift */; };
+		0779CCFC24D92A0F001342E8 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779CCFB24D92A0F001342E8 /* Project.swift */; };
+		0779CCFE24D92A22001342E8 /* Subtask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779CCFD24D92A21001342E8 /* Subtask.swift */; };
 		11F0C5BBC12384CAA5553C31 /* Pods_Todoey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DD2B88076DA48C7E8A430A /* Pods_Todoey.framework */; };
 		EB2BE4FA239524DB00FB933B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BE4F9239524DB00FB933B /* AppDelegate.swift */; };
-		EB2BE4FE239524DB00FB933B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BE4FD239524DB00FB933B /* ViewController.swift */; };
+		EB2BE4FE239524DB00FB933B /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2BE4FD239524DB00FB933B /* ProjectViewController.swift */; };
 		EB2BE501239524DB00FB933B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2BE4FF239524DB00FB933B /* Main.storyboard */; };
 		EB2BE503239524DC00FB933B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB2BE502239524DC00FB933B /* Assets.xcassets */; };
 		EB2BE506239524DC00FB933B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2BE504239524DC00FB933B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0779CCF724D921C0001342E8 /* SubtaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtaskViewController.swift; sourceTree = "<group>"; };
+		0779CCF924D92220001342E8 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
+		0779CCFB24D92A0F001342E8 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		0779CCFD24D92A21001342E8 /* Subtask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtask.swift; sourceTree = "<group>"; };
 		07D2BE5170C54CD90E16D777 /* Pods-Todoey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoey.release.xcconfig"; path = "Target Support Files/Pods-Todoey/Pods-Todoey.release.xcconfig"; sourceTree = "<group>"; };
 		24DD2B88076DA48C7E8A430A /* Pods_Todoey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todoey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7BC9AC554C6DD9C78D8B4A /* Pods-Todoey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoey.debug.xcconfig"; path = "Target Support Files/Pods-Todoey/Pods-Todoey.debug.xcconfig"; sourceTree = "<group>"; };
 		EB2BE4F6239524DB00FB933B /* Todoey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2BE4F9239524DB00FB933B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB2BE4FD239524DB00FB933B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB2BE4FD239524DB00FB933B /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		EB2BE500239524DB00FB933B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB2BE502239524DC00FB933B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB2BE505239524DC00FB933B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +48,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		077DE4C924D91D05009008F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB2BE4FF239524DB00FB933B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		077DE4CA24D91D0C009008F7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0779CCF924D92220001342E8 /* SwipeTableViewController.swift */,
+				EB2BE4FD239524DB00FB933B /* ProjectViewController.swift */,
+				0779CCF724D921C0001342E8 /* SubtaskViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		077DE4CB24D91D1A009008F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0779CCFB24D92A0F001342E8 /* Project.swift */,
+				0779CCFD24D92A21001342E8 /* Subtask.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A89DF89BBA2B24137973A81C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				EB2BE4F9239524DB00FB933B /* AppDelegate.swift */,
-				EB2BE4FD239524DB00FB933B /* ViewController.swift */,
-				EB2BE4FF239524DB00FB933B /* Main.storyboard */,
+				077DE4CB24D91D1A009008F7 /* Models */,
+				077DE4C924D91D05009008F7 /* View */,
+				077DE4CA24D91D0C009008F7 /* Controllers */,
 				EB2BE502239524DC00FB933B /* Assets.xcassets */,
 				EB2BE504239524DC00FB933B /* LaunchScreen.storyboard */,
 				EB2BE507239524DC00FB933B /* Info.plist */,
@@ -203,8 +239,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB2BE4FE239524DB00FB933B /* ViewController.swift in Sources */,
+				EB2BE4FE239524DB00FB933B /* ProjectViewController.swift in Sources */,
+				0779CCF824D921C0001342E8 /* SubtaskViewController.swift in Sources */,
+				0779CCFC24D92A0F001342E8 /* Project.swift in Sources */,
+				0779CCFE24D92A22001342E8 /* Subtask.swift in Sources */,
 				EB2BE4FA239524DB00FB933B /* AppDelegate.swift in Sources */,
+				0779CCFA24D92220001342E8 /* SwipeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
