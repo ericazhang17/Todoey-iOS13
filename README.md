@@ -1,1 +1,1 @@
-#README
+Developed for learning purposes.
