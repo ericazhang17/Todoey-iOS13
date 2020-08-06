@@ -8,10 +8,12 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class SubtaskViewController: SwipeTableViewController {
 
-
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var subtasks :Results<Subtask>?
     let realm = try! Realm()
     
@@ -23,7 +25,26 @@ class SubtaskViewController: SwipeTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.separatorStyle = .none
+        
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let colorHex = selectedProject?.hexColor {
+            
+            title = selectedProject!.name
+            
+            guard let navBar = navigationController?.navigationBar else {fatalError("Navigation Controller does not exist yet.")}
+            if let navBarColor = UIColor(hexString: colorHex) {
+                let appearance = UINavigationBarAppearance()
+                navBar.scrollEdgeAppearance = appearance
+                //ios 13 transparent large title bg
+                appearance.backgroundColor = navBarColor
+                navBar.tintColor = ContrastColorOf(navBarColor, returnFlat: true)
+                appearance.largeTitleTextAttributes = [.foregroundColor: ContrastColorOf(navBarColor, returnFlat: true)]
+            }
+        }
     }
     
     //MARK: - Data manipulation methods
@@ -59,6 +80,12 @@ class SubtaskViewController: SwipeTableViewController {
         
         if let subtask = subtasks?[indexPath.row] {
             cell.textLabel?.text = subtask.title
+            let percentage = CGFloat(indexPath.row)/CGFloat(subtasks!.count) //can force unwrap inside let binding
+            if let color = UIColor(hexString: selectedProject!.hexColor)?.darken(byPercentage: percentage)?.lighten(byPercentage: CGFloat(0.15)) {
+                cell.backgroundColor = color
+                cell.textLabel?.textColor = ContrastColorOf(color, returnFlat: true)
+                }
+
             cell.accessoryType = subtask.done ? .checkmark : .none
         } else {
             cell.textLabel?.text = "No Subtask Added"

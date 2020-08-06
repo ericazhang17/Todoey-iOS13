@@ -11,6 +11,7 @@ import RealmSwift
 
 class Project : Object {
     @objc dynamic var name : String = ""
+    @objc dynamic var hexColor : String = ""
     // 1-> many relationship
     let subtasks = List<Subtask>()
 }

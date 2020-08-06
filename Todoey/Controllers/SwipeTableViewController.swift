@@ -35,22 +35,17 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
             
             self.updateModel(at: indexPath)
         }
-
-        // customize the action appearance
         deleteAction.image = UIImage(named: "delete-icon")
         return [deleteAction]
     }
-    
+    // Overriden in subclasses
     func updateModel (at indexPath : IndexPath) {
         
     }
-
     
     func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
         var options = SwipeOptions()
         options.expansionStyle = .destructive
         return options
     }
-    
-
 }
