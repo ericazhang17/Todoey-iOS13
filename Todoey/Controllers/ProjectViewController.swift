@@ -79,6 +79,7 @@ class ProjectTableViewController: SwipeTableViewController {
                 fatalError()
             }
             cell.backgroundColor = projectColor
+            cell.selectionStyle = .none // remove highlight effect completely
             cell.textLabel?.textColor = ContrastColorOf(projectColor, returnFlat: true)
         }
         return cell
@@ -89,7 +90,7 @@ class ProjectTableViewController: SwipeTableViewController {
         
         
         performSegue(withIdentifier: "goToSubtasks", sender: self)
-        tableView.deselectRow(at: indexPath, animated: true)
+//        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -136,7 +137,7 @@ class ProjectTableViewController: SwipeTableViewController {
        let b: CGFloat = components?[2] ?? 0.0
 
        let hexString = String.init(format: "#%02lX%02lX%02lX", lroundf(Float(r * 255)), lroundf(Float(g * 255)), lroundf(Float(b * 255)))
-       print(hexString)
+//       print(hexString)
        return hexString
     }
 }
